@@ -6,12 +6,12 @@ This directory contains project screenshots for the README and documentation.
 
 | Filename | Description | Status |
 |----------|-------------|--------|
-| `01_wazuh_dashboard.png` | Wazuh security alerts dashboard — shows live alerts and their levels | *Pending deployment* |
-| `02_cli_output.png` | Full CLI output of the triage assistant processing an SSH brute force alert | *Pending deployment* |
-| `03_ai_analysis.png` | Close-up of the AI analysis panel: MITRE mapping and severity score | *Pending deployment* |
-| `04_incident_report.png` | Generated Markdown incident report rendered in VS Code preview | *Pending deployment* |
-| `05_pdf_report.png` | PDF incident report opened in a browser, showing professional formatting | *Pending deployment* |
-| `06_demo_mode.png` | Demo mode running with all 5 sample alert types in sequence | *Pending deployment* |
+| `01_wazuh_dashboard.png` | Wazuh security alerts dashboard — shows live alerts and their levels | *Done* |
+| `02_cli_output.png` | Full CLI output of the triage assistant processing an SSH brute force alert | *Done* |
+| `03_ai_analysis.png` | Close-up of the AI analysis panel: MITRE mapping and severity score | *Done* |
+| `04_incident_report.png` | Generated Markdown incident report rendered in VS Code preview | *Done* |
+| `05_pdf_report.png` | PDF incident report opened in a browser, showing professional formatting | *Done* |
+| `06_demo_mode.png` | Demo mode running with all 5 sample alert types in sequence | *Done* |
 
 ## How to Capture Screenshots
 
