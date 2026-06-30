@@ -13,25 +13,3 @@ This directory contains project screenshots for the README and documentation.
 | `05_pdf_report.png` | PDF incident report opened in a browser, showing professional formatting | *Done* |
 | `06_demo_mode.png` | Demo mode running with all 5 sample alert types in sequence | *Done* |
 
-## How to Capture Screenshots
-
-### CLI Output Screenshot
-```bash
-# Run the assistant and capture output
-python main.py --mode demo --limit 1
-# Take screenshot of the terminal
-```
-
-### Wazuh Dashboard Screenshot
-1. Open your Wazuh web UI (https://WAZUH_IP)
-2. Navigate to Security Events → Threat Hunting
-3. Set time range to "Last 24 hours"
-4. Screenshot the alert table
-
-## Screenshot Naming Convention
-
-Format: `{number:02d}_{descriptive_name}.png`
-
-Example: `02_cli_output.png`
-
-Use PNG format for screenshots. Keep files under 2MB for fast page loads.
