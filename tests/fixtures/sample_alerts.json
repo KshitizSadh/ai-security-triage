@@ -1,0 +1,117 @@
+{
+  "_comment": "Sample Wazuh alerts for demo mode. These represent real Wazuh alert structures.",
+  "alerts": [
+    {
+      "_id": "AY123456789abcdef",
+      "_source": {
+        "timestamp": "2024-12-01T14:30:22.000Z",
+        "rule": {
+          "id": "5710",
+          "level": 10,
+          "description": "sshd: brute force trying to get access to the system.",
+          "groups": ["authentication_failed", "ssh", "invalid_login"]
+        },
+        "agent": {
+          "id": "001",
+          "name": "web-server-01",
+          "ip": "10.0.0.5"
+        },
+        "data": {
+          "srcip": "203.0.113.45",
+          "dstuser": "root"
+        }
+      }
+    },
+    {
+      "_id": "AY987654321fedcba",
+      "_source": {
+        "timestamp": "2024-12-01T14:35:11.000Z",
+        "rule": {
+          "id": "31103",
+          "level": 9,
+          "description": "Web server 400 error code (bad client request). Possible SQL injection attempt.",
+          "groups": ["web", "attack", "sql_injection"]
+        },
+        "agent": {
+          "id": "002",
+          "name": "app-server-01",
+          "ip": "10.0.0.6"
+        },
+        "data": {
+          "srcip": "198.51.100.22",
+          "url": "/api/users?id=1' OR '1'='1",
+          "method": "GET",
+          "id": "400"
+        }
+      }
+    },
+    {
+      "_id": "BZ111222333aabbcc",
+      "_source": {
+        "timestamp": "2024-12-01T14:40:05.000Z",
+        "rule": {
+          "id": "550",
+          "level": 7,
+          "description": "Integrity checksum changed.",
+          "groups": ["ossec", "syscheck", "syscheck_entry_modified"]
+        },
+        "agent": {
+          "id": "003",
+          "name": "db-server-01",
+          "ip": "10.0.0.7"
+        },
+        "syscheck": {
+          "path": "/etc/passwd",
+          "event": "modified",
+          "md5_before": "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6",
+          "md5_after": "f6e5d4c3b2a1f0e9d8c7b6a5f4e3d2c1"
+        },
+        "data": {}
+      }
+    },
+    {
+      "_id": "CC444555666ddeeff",
+      "_source": {
+        "timestamp": "2024-12-01T14:45:33.000Z",
+        "rule": {
+          "id": "5501",
+          "level": 12,
+          "description": "Attempt to login using a non-existent user - Possible Privilege Escalation.",
+          "groups": ["sudo", "priv_escalation", "authentication_failed"]
+        },
+        "agent": {
+          "id": "001",
+          "name": "web-server-01",
+          "ip": "10.0.0.5"
+        },
+        "data": {
+          "srcip": "10.0.0.50",
+          "dstuser": "root",
+          "command": "sudo /bin/bash"
+        }
+      }
+    },
+    {
+      "_id": "DD777888999gghhii",
+      "_source": {
+        "timestamp": "2024-12-01T14:50:18.000Z",
+        "rule": {
+          "id": "40101",
+          "level": 8,
+          "description": "Firewall drop event. Possible port scan detected.",
+          "groups": ["firewall", "port_scan", "recon"]
+        },
+        "agent": {
+          "id": "004",
+          "name": "firewall-01",
+          "ip": "10.0.0.1"
+        },
+        "data": {
+          "srcip": "185.220.101.34",
+          "dstip": "10.0.0.5",
+          "protocol": "tcp"
+        }
+      }
+    }
+  ]
+}

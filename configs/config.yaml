@@ -1,0 +1,67 @@
+# ============================================================
+# AI Security Alert Triage Assistant — Application Config
+# Non-sensitive settings (safe to commit to Git)
+# ============================================================
+
+application:
+  name: "AI Security Alert Triage Assistant"
+  version: "1.0.0"
+  description: "AI-powered Wazuh alert triage using Claude"
+  author: "Kshitiz"
+
+wazuh:
+  api_timeout_seconds: 30
+  token_refresh_interval: 800
+  extracted_fields:
+    - id
+    - rule.id
+    - rule.level
+    - rule.description
+    - rule.groups
+    - rule.mitre.id
+    - rule.mitre.tactic
+    - agent.id
+    - agent.name
+    - agent.ip
+    - data.srcip
+    - data.dstip
+    - data.protocol
+    - data.url
+    - data.method
+    - syscheck.path
+    - syscheck.event
+    - timestamp
+
+ai_analysis:
+  include_mitre_mapping: true
+  include_investigation_steps: true
+  include_remediation_steps: true
+  investigation_step_count: 5
+  remediation_step_count: 5
+  severity_scale_max: 10
+  retry_on_invalid_json: true
+  max_retries: 3
+
+reporting:
+  output_formats:
+    - markdown
+    - pdf
+  filename_pattern: "TRP_{timestamp}_{rule_id}_{agent}"
+  include_raw_alert_json: false
+  include_ai_prompt: false
+  include_audit_info: true
+
+display:
+  use_color: true
+  show_progress_bars: true
+  panel_width: 80
+  severity_colors:
+    critical: "bold red"
+    high: "red"
+    medium: "yellow"
+    low: "green"
+  severity_thresholds:
+    critical: 9
+    high: 7
+    medium: 4
+    low: 1

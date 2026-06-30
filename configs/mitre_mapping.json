@@ -1,0 +1,126 @@
+{
+  "_comment": "Maps Wazuh rule groups to MITRE ATT&CK Tactic and Technique. Used as fallback when AI mapping is uncertain.",
+  "_version": "ATT&CK v14 — Updated December 2024",
+  "rule_group_mappings": {
+    "authentication_failed": {
+      "tactic": "Credential Access",
+      "tactic_id": "TA0006",
+      "technique": "Brute Force",
+      "technique_id": "T1110",
+      "subtechnique": "Password Guessing",
+      "subtechnique_id": "T1110.001"
+    },
+    "authentication_success": {
+      "tactic": "Initial Access",
+      "tactic_id": "TA0001",
+      "technique": "Valid Accounts",
+      "technique_id": "T1078",
+      "subtechnique": null,
+      "subtechnique_id": null
+    },
+    "web": {
+      "tactic": "Initial Access",
+      "tactic_id": "TA0001",
+      "technique": "Exploit Public-Facing Application",
+      "technique_id": "T1190",
+      "subtechnique": null,
+      "subtechnique_id": null
+    },
+    "sql_injection": {
+      "tactic": "Initial Access",
+      "tactic_id": "TA0001",
+      "technique": "Exploit Public-Facing Application",
+      "technique_id": "T1190",
+      "subtechnique": null,
+      "subtechnique_id": null
+    },
+    "syscheck": {
+      "tactic": "Defense Evasion",
+      "tactic_id": "TA0005",
+      "technique": "Indicator Removal",
+      "technique_id": "T1070",
+      "subtechnique": "Timestomp",
+      "subtechnique_id": "T1070.006"
+    },
+    "syscheck_entry_modified": {
+      "tactic": "Defense Evasion",
+      "tactic_id": "TA0005",
+      "technique": "Modify System Image",
+      "technique_id": "T1601",
+      "subtechnique": null,
+      "subtechnique_id": null
+    },
+    "rootkit": {
+      "tactic": "Defense Evasion",
+      "tactic_id": "TA0005",
+      "technique": "Rootkit",
+      "technique_id": "T1014",
+      "subtechnique": null,
+      "subtechnique_id": null
+    },
+    "malware": {
+      "tactic": "Execution",
+      "tactic_id": "TA0002",
+      "technique": "User Execution",
+      "technique_id": "T1204",
+      "subtechnique": "Malicious File",
+      "subtechnique_id": "T1204.002"
+    },
+    "priv_escalation": {
+      "tactic": "Privilege Escalation",
+      "tactic_id": "TA0004",
+      "technique": "Abuse Elevation Control Mechanism",
+      "technique_id": "T1548",
+      "subtechnique": "Sudo and Sudo Caching",
+      "subtechnique_id": "T1548.003"
+    },
+    "sudo": {
+      "tactic": "Privilege Escalation",
+      "tactic_id": "TA0004",
+      "technique": "Abuse Elevation Control Mechanism",
+      "technique_id": "T1548",
+      "subtechnique": "Sudo and Sudo Caching",
+      "subtechnique_id": "T1548.003"
+    },
+    "firewall": {
+      "tactic": "Discovery",
+      "tactic_id": "TA0007",
+      "technique": "Network Service Discovery",
+      "technique_id": "T1046",
+      "subtechnique": null,
+      "subtechnique_id": null
+    },
+    "port_scan": {
+      "tactic": "Reconnaissance",
+      "tactic_id": "TA0043",
+      "technique": "Active Scanning",
+      "technique_id": "T1595",
+      "subtechnique": "Scanning IP Blocks",
+      "subtechnique_id": "T1595.001"
+    },
+    "recon": {
+      "tactic": "Reconnaissance",
+      "tactic_id": "TA0043",
+      "technique": "Active Scanning",
+      "technique_id": "T1595",
+      "subtechnique": null,
+      "subtechnique_id": null
+    },
+    "attack": {
+      "tactic": "Initial Access",
+      "tactic_id": "TA0001",
+      "technique": "Exploit Public-Facing Application",
+      "technique_id": "T1190",
+      "subtechnique": null,
+      "subtechnique_id": null
+    },
+    "invalid_login": {
+      "tactic": "Credential Access",
+      "tactic_id": "TA0006",
+      "technique": "Brute Force",
+      "technique_id": "T1110",
+      "subtechnique": "Password Guessing",
+      "subtechnique_id": "T1110.001"
+    }
+  }
+}
