@@ -10,6 +10,5 @@ This directory contains project screenshots for the README and documentation.
 | `02_cli_output.png` | Full CLI output of the triage assistant processing an SSH brute force alert | *Done* |
 | `03_ai_analysis.png` | Close-up of the AI analysis panel: MITRE mapping and severity score | *Done* |
 | `04_incident_report.png` | Generated Markdown incident report rendered in VS Code preview | *Done* |
-| `05_pdf_report.png` | PDF incident report opened in a browser, showing professional formatting | *Done* |
-| `06_demo_mode.png` | Demo mode running with all 5 sample alert types in sequence | *Done* |
+ |
 
